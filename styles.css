@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     height: max-content;
+    flex-direction: column;
 }
 
 .container {
@@ -90,3 +91,13 @@ button:hover {
     height: auto;
     border-radius: 8px;
 }
+
+#dynamicSection{
+    padding-top: 35px;
+}
+
+.header{
+    display: flex;
+}
+
+

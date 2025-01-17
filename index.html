@@ -9,6 +9,23 @@
     <title>Lesson_04</title>
 </head>
 <body>
+    <div id="header" class="header">
+
+        <div class="menu">
+          <h2><a href="#final-stages">Task_0</a></h2>
+        </div>
+        <div class="menu1">
+          <h2><a href="#final-stages">Task_1</a></h2>
+        </div>
+        <div class="menu2">
+          <h2><a href="#small-pieces">Task_2</a></h2>
+        </div>
+        <div class="menu3">
+          <h2><a href="#statellite-fragments">Task_3 </a></h2>
+        </div>
+      </div>
+    </div>
+
 <div class="container">
     <div class="input-group">
         <label for="firstName">Введіть ім'я</label>
@@ -20,22 +37,7 @@
     </div>
     <button onclick="sayHello()">Привіт</button>
 
-    <div class="result">
-        <div id="result" class="result-output"></div>
-    </div>
-    
-    <div class="input-group">
-        <label for="amount">Введіть суму, яку хочете подвоїти</label>
-        <input type="number" id="amount" value="0">
-    </div>
-    <button onclick="doubleAmount()">Магія</button>
-
-    <div class="result">
-        <strong>Результат: </strong>
-        <div id="magic" class="result-output"></div>
-
-        <div class="image-container" id="imageContainer"></div>
-    </div>
+    <div id="dynamicSection"></div>
 </div>
 
 <script src="script.js"></script>
