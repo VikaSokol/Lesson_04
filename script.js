@@ -54,3 +54,4 @@ function doubleAmount() {
         imageContainer.innerHTML = ''; // Очищаємо зображення, якщо є
     }
 }
+

@@ -12,21 +12,27 @@
     <div id="header" class="header">
 
         <div class="menu">
-          <h2><a href="#final-stages">Task_0</a></h2>
+          <h2><a href="#task0">Task_0</a></h2>
         </div>
         <div class="menu1">
-          <h2><a href="#final-stages">Task_1</a></h2>
+          <h2><a href="#task1">Task_1</a></h2>
         </div>
         <div class="menu2">
-          <h2><a href="#small-pieces">Task_2</a></h2>
+          <h2><a href="#task2">Task_2</a></h2>
         </div>
         <div class="menu3">
-          <h2><a href="#statellite-fragments">Task_3 </a></h2>
+          <h2><a href="#task3">Task_3 </a></h2>
+        </div>
+        <div class="menu4">
+          <h2><a href="#task4">Task_4 </a></h2>
+        </div>
+        <div class="menu5">
+          <h2><a href="#task5">Task_5 </a></h2>
         </div>
       </div>
     </div>
 
-<div class="container">
+<div id="task0" class="container">
     <div class="input-group">
         <label for="firstName">Введіть ім'я</label>
         <input type="text" id="firstName" placeholder="Ім'я">
@@ -39,6 +45,152 @@
 
     <div id="dynamicSection"></div>
 </div>
+
+
+
+<div id="task1">
+  <h2>Калькулятор квадрата</h2>
+  <label id="qw" for="sideLength">Введіть сторону квадрата:</label>
+  <input type="number" id="sideLength" placeholder="Введіть число">
+  <button id="qe" onclick="calculateSquare()">Результат</button>
+  <p id="output"></p>
+
+  <script>
+      function calculateSquare() {
+          let side = parseFloat(document.getElementById("sideLength").value);
+          if (isNaN(side) || side <= 0) {
+              document.getElementById("output").textContent = "Будь ласка, введіть коректне число";
+              return;
+          }
+          let perimeter = 4 * side;
+          let area = side * side;
+          document.getElementById("output").textContent = `Периметр: ${perimeter}, Площа: ${area}`;
+      }
+  </script>
+</div>
+
+
+<div id="task2">
+  <h2>Калькулятор середнього арифметичного</h2>
+    <label for="num1">Введіть перше число:</label>
+    <input type="number" id="num1" placeholder="Введіть число">
+    <br>
+    <label id="qe" for="num2">Введіть друге число:</label>
+    <input type="number" id="num2" placeholder="Введіть число">
+    <br>
+    <button id="qe" onclick="calculateAverage()">Середнє арифметичне</button>
+    <p id="output2"></p>
+
+    <script>
+        function calculateAverage() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById("output2").textContent = "Будь ласка, введіть коректні числа";
+                return;
+            }
+            let average = (num1 + num2) / 2;
+            document.getElementById("output2").textContent = `Середнє арифметичне: ${average}`;
+        }
+    </script>
+</div>
+
+<div id="task3">
+  <h2>Калькулятор прямокутника</h2>
+    <label for="length">Введіть довжину:</label>
+    <input type="number" id="length" placeholder="Введіть довжину">
+    <br>
+    <label id="qe" for="width">Введіть ширину:</label>
+    <input type="number" id="width" placeholder="Введіть ширину">
+    <br>
+    <button id="qe" onclick="calculateRectangle()">Обрахувати</button>
+    <p id="output3"></p>
+
+    <script>
+        function calculateRectangle() {
+            let length = parseFloat(document.getElementById("length").value);
+            let width = parseFloat(document.getElementById("width").value);
+            if (isNaN(length) || isNaN(width) || length <= 0 || width <= 0) {
+                document.getElementById("output3").textContent = "Будь ласка, введіть коректні значення";
+                return;
+            }
+            let perimeter = 2 * (length + width);
+            let area = length * width;
+            document.getElementById("output3").textContent = `Периметр: ${perimeter}, Площа: ${area}`;
+        }
+    </script>
+</div>
+
+
+<div id="task4">
+  <h2>Калькулятор середини відрізка</h2>
+  <label for="x1">Введіть координату X1:</label>
+  <input type="number" id="x1" placeholder="Введіть X1">
+  <br>
+  <label for="y1">Введіть координату Y1:</label>
+  <input type="number" id="y1" placeholder="Введіть Y1">
+  <br>
+  <label for="x2">Введіть координату X2:</label>
+  <input type="number" id="x2" placeholder="Введіть X2">
+  <br>
+  <label for="y2">Введіть координату Y2:</label>
+  <input type="number" id="y2" placeholder="Введіть Y2">
+  <br>
+  <button onclick="calculateMidpoint()">Координата середини відрізка</button>
+  <p id="output4"></p>
+
+  <script>
+      function calculateMidpoint() {
+          let x1 = parseFloat(document.getElementById("x1").value);
+          let y1 = parseFloat(document.getElementById("y1").value);
+          let x2 = parseFloat(document.getElementById("x2").value);
+          let y2 = parseFloat(document.getElementById("y2").value);
+          
+          if (isNaN(x1) || isNaN(y1) || isNaN(x2) || isNaN(y2)) {
+              document.getElementById("output4").textContent = "Будь ласка, введіть коректні координати";
+              return;
+          }
+          
+          let midpointX = (x1 + x2) / 2;
+          let midpointY = (y1 + y2) / 2;
+          document.getElementById("output4").textContent = `Координата середини: (${midpointX}, ${midpointY})`;
+      }
+  </script>
+</div>
+
+
+<div id="task5">
+
+  <input type="number" id="initialReading" placeholder="Початковий показник води">
+<input type="number" id="finalReading" placeholder="Кінцевий показник води">
+<button id="calculate">Обчислити</button>
+<div id="result"></div>
+
+  <script>
+  document.getElementById("calculate").addEventListener("click", function () {
+    let initialReading = parseFloat(document.getElementById("initialReading").value);
+    let finalReading = parseFloat(document.getElementById("finalReading").value);
+    
+    if (isNaN(initialReading) || isNaN(finalReading)) {
+        alert("Будь ласка, введіть коректні числа.");
+        return;
+    }
+    
+    let waterConsumed = finalReading - initialReading;
+    
+    if (waterConsumed <= 0) {
+        alert("Помилка! Кінцевий показник має бути більший за початковий.");
+        return;
+    }
+    
+    let amountToPay = waterConsumed * 14.25;
+    
+    document.getElementById("result").innerHTML = `Спожита вода: ${waterConsumed} м³ <br> Сума до сплати: ${amountToPay.toFixed(2)} грн`;
+});
+</script>
+
+</div>
+
 
 <script src="script.js"></script>
 </body>
